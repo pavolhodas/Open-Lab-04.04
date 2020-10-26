@@ -6,7 +6,15 @@ namespace Open_Lab_04._04
     {
         public string FormatPhoneNumber(int[] numbers)
         {
-            throw new NotImplementedException();
+            
+            string space = "";
+            string formatedNumbers = "";
+            foreach (int number in numbers)
+            {
+                formatedNumbers += string.Join(space, number);
+                space = ", ";
+            }
+            return Convert.ToInt64(formatedNumbers).ToString("(0##) ###-####");
         }
     }
 }
